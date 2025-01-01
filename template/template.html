@@ -11,22 +11,18 @@
 <DL>
   <p>
     <DT>
-      <H3 ADD_DATE={{ time }} LAST_MODIFIED={{ time }} PERSONAL_TOOLBAR_FOLDER="true">Bookmarks Toolbar</H3>
+      <H3 ADD_DATE={{ time }} LAST_MODIFIED={{ time }}>Added at {{ timestamp }}</H3>
       <DL>
         <p>
+          {%- for window in windows %}
           <DT>
-            <H3 ADD_DATE={{ time }} LAST_MODIFIED={{ time }}>Added at {{ timestamp }}</H3>
+            <H3 ADD_DATE={{ time }} LAST_MODIFIED={{ time }}>{{ window.title }}</H3>
             <DL>
               <p>
-                {%- for window in windows %}
-                <DT>
-                  <H3 ADD_DATE={{ time }} LAST_MODIFIED={{ time }}>{{ window.title }}</H3>
-                  <DL>
-                    <p>
-                      {%- for tab in window.tabs %}
-                      <DT><A HREF={{ tab.url }} ADD_DATE={{ time }} LAST_MODIFIED={{ time }}>{{ tab.title }}</A>
-                        {% endfor %}
-                  </DL>
-                  <p>
-                    {% endfor %}
+                {%- for tab in window.tabs %}
+                <DT><A HREF={{ tab.url }} ADD_DATE={{ time }} LAST_MODIFIED={{ time }}>{{ tab.title }}</A>
+                  {% endfor %}
             </DL>
+            <p>
+              {% endfor %}
+      </DL>
