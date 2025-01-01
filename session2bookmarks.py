@@ -31,7 +31,7 @@ def main():
 
     render_data = {
         "time": round(time.time() * 1000),
-        "timestamp": time.strftime("%Y-%m-%d_%H:%M:%S", time.localtime()),
+        "timestamp": time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()),
         "windows": windows,
     }
 
