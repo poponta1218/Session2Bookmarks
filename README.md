@@ -1,7 +1,6 @@
 # Session2Bookmarks
 
-This Python script processes JSON data exported from [Tab-Session-Manager](https://github.com/sienori/Tab-Session-Manager).  
-This tool converts browser session JSON files exported from Tab-Session-Manager into a bookmarks HTML file.
+This tool converts browser session JSON files exported from [Tab-Session-Manager](https://github.com/sienori/Tab-Session-Manager) into a bookmarks HTML file.
 
 ## Prerequisites
 
