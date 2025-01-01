@@ -1,0 +1,10 @@
+[project]
+name = "session2bookmarks"
+version = "0.1.0"
+description = "Tool to convert session files to bookmarks"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = ["jinja2>=3.1.5"]
+
+[tool.uv]
+dev-dependencies = ["ruff>=0.8.4"]

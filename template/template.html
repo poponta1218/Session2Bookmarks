@@ -1,0 +1,32 @@
+<!DOCTYPE NETSCAPE-Bookmark-file-1>
+<!-- This is an automatically generated file.
+     It will be read and overwritten.
+     DO NOT EDIT! -->
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<meta http-equiv="Content-Security-Policy"
+  content="default-src 'self'; script-src 'none'; img-src data: *; object-src 'none'">
+</meta>
+<TITLE>Bookmarks</TITLE>
+<H1>Bookmarks Menu</H1>
+<DL>
+  <p>
+    <DT>
+      <H3 ADD_DATE={{ time }} LAST_MODIFIED={{ time }} PERSONAL_TOOLBAR_FOLDER="true">Bookmarks Toolbar</H3>
+      <DL>
+        <p>
+          <DT>
+            <H3 ADD_DATE={{ time }} LAST_MODIFIED={{ time }}>Added at {{ timestamp }}</H3>
+            <DL>
+              <p>
+                {%- for window in windows %}
+                <DT>
+                  <H3 ADD_DATE={{ time }} LAST_MODIFIED={{ time }}>{{ window.title }}</H3>
+                  <DL>
+                    <p>
+                      {%- for tab in window.tabs %}
+                      <DT><A HREF={{ tab.url }} ADD_DATE={{ time }} LAST_MODIFIED={{ time }}>{{ tab.title }}</A>
+                        {% endfor %}
+                  </DL>
+                  <p>
+                    {% endfor %}
+            </DL>
